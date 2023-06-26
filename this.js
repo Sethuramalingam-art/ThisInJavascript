@@ -1,3 +1,17 @@
+Important question on this 
+const object1 = {
+  nam: "sethu",
+  getMessage(){
+    console.log(this.nam);
+  },
+};
+setInterval(object1.getMessage, 1000); // inside settimout and setinterval this will point to window so this.nam is undefined
+setTimeout(object1.getMessage, 1000); // inside settimout and setinterval this will point to window so this.nam is undefined
+
+how to fix using settimeout
+setTimeout(()=>object1.getMessage(), 1000);
+
+
 // JAVASCRIPT this is used different scenarios's
 
 // How JavaScript Implicit Binding Works? => this
